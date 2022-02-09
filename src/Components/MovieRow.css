@@ -1,0 +1,78 @@
+.movieRow {
+    margin-bottom: 30px;
+}
+/* Recuo do titulo das listas*/ 
+.movieRow h1 {
+    margin: 0px 0px 0px 30px;
+
+}
+/* Area Geral com recuo a esquerda alinhado com o titulo*/ 
+.movieRow--listarea {
+    overflow-x: hidden;
+    padding-left: 30px;
+}
+
+.movieRow--list {
+    transition: all ease 0.5s;
+} 
+
+/* Itens ficarem um do lado do outro com tamanho reduzido*/ 
+/*cursor muda quando passa em cima da imagem*/
+.movieRow--item {
+    display: inline-block;
+    width: 150px;
+    cursor: pointer;
+}
+
+/* Proporçoes de exibicao da imagem*/ 
+/* Ajusta tempo de transiçao*/ 
+.movieRow--item img {
+    width: 100%;
+    transform: scale(0.9);
+    transition: all ease 0.4s;
+}
+
+/* efeito ao passar o mouse na imagem*/ 
+.movieRow--item img:hover{
+    transform: scale(1);
+}
+
+/*Barras de navegaçao de cada sessao*/
+.movieRow--left,
+.movieRow--right {
+    position: absolute;
+    width: 40px;
+    height: 225px;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor: pointer;
+    opacity: 0;
+    transition: all ease 0.8s;
+    
+}
+
+.movieRow--left{
+    left: 0;    
+}
+
+.movieRow--right{
+    right: 0;
+}
+
+.movieRow:hover .movieRow--left,
+.movieRow:hover .movieRow--right{
+    opacity: 1;
+    
+}
+
+/*ajust das setas de navegação para celular*/
+@media (max-width: 760px){
+    .movieRow--left,
+    .movieRow--right{
+        opacity: 1;
+    }
+}
