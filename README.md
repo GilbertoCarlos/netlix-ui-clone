@@ -6,7 +6,7 @@ Veja o exemplo a seguir do layout do projeto!
 
 ## Demo
 
-![Demo](/src/img/video.gif)
+![Demo](/src/img/demo.gif)
 
 ## Habilidades Desenvolvidas
 
